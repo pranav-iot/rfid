@@ -1,0 +1,26 @@
+SDA --> 24 
+SCK --> 23 
+MOSI --> 19 
+MISO --> 21 
+GND --> 6 
+RST --> 22 
+3.3V --> 1
+
+Step 1: Enable interfacing options with.
+	sudo raspi-config
+Step 2: Select interfacing options > serial from the options. And select yes.
+Step 3: Reboot raspberry pi.
+Step 4: Check if serial bus is enabled using
+	lsmod | grep spi
+Step 5: Ensure your Raspberry Pi is running the latest version of all the software. Run the following two commands on your Raspberry Pi to update it.
+	sudo apt-get update
+	sudo apt-get upgrade
+Step 6: Install the python2.7-dev package
+	sudo apt-get install python2.7-dev
+Step 7: Python Library SPI Py and install it to your Raspberry Pi to interact with the RFID RC522.
+	cd SPI-Py
+	sudo python setup.py install
+	cd ..
+Step 8: To test, if the system is functioning correctly, lets write a small program:
+	cd ~/
+	sudo nano read.py
