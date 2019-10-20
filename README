@@ -17,6 +17,7 @@ Step 5: Ensure your Raspberry Pi is running the latest version of all the softwa
 	sudo apt-get upgrade
 Step 6: Install the python2.7-dev package
 	sudo apt-get install python2.7-dev
+	sudo apt-get install python-spidev python3-spidev
 Step 7: Python Library SPI Py and install it to your Raspberry Pi to interact with the RFID RC522.
 	cd SPI-Py
 	sudo python setup.py install
